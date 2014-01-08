@@ -4,7 +4,7 @@ body
 	padding: 0;
 	color: #555;
 	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #EFEFEF;
+	background: white;
 }
 
 #page
@@ -12,14 +12,12 @@ body
 	margin-top: 5px;
 	margin-bottom: 5px;
 	background: white;
-	border: 1px solid #C9E0ED;
 }
 
 #header
 {
 	margin: 0;
 	padding: 0;
-	border-top: 3px solid #C9E0ED;
 }
 
 #content
@@ -30,6 +28,7 @@ body
 #sidebar
 {
 	padding: 20px 20px 20px 0;
+	margin-top:-30px;
 }
 
 #footer
@@ -49,18 +48,19 @@ body
 
 #mainmenu
 {
-	background:white url(bg.gif) repeat-x left top;
+	background:#CD2929;
 }
 
 #mainmenu ul
 {
-	padding:6px 20px 5px 20px;
-	margin:0px;
+	padding:10px;
+	margin:0;
 }
 
 #mainmenu ul li
 {
 	display: inline;
+	margin:0;
 }
 
 #mainmenu ul li a
@@ -69,14 +69,12 @@ body
 	background-color:transparent;
 	font-size:12px;
 	font-weight:bold;
-	text-decoration:none;
-	padding:5px 8px;
+	padding:10px;
 }
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
-	color: #6399cd;
-	background-color:#EFF4FA;
+	background-color:#555;
 	text-decoration:none;
 }
 
@@ -132,13 +130,16 @@ div.view
 {
 	padding: 10px;
 	margin: 10px 0;
-	border: 1px solid #C9E0ED;
+	border-top: 1px solid #C9E0ED;
 }
+
+.test div.view + div.view { border-top: 1px solid black;  }
 
 div.breadcrumbs
 {
 	font-size: 0.9em;
 	padding: 5px 20px;
+	margin-top:10px;
 }
 
 div.breadcrumbs span
@@ -226,4 +227,10 @@ div.search-form
 .operations li a:hover
 {
 	background: #80CFFF;
+}
+
+thead {
+   
+   background: #6FACCF;
+   color:white;
 }

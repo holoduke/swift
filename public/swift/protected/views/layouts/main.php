@@ -6,6 +6,9 @@
 	<meta name="language" content="en" />
 
 	<!-- blueprint CSS framework -->
+	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
 	<!--[if lt IE 8]>
@@ -14,7 +17,16 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+	
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap/css/bootstrap.min.css"/>
 
+	<style>
+	body{
+	font-family: 'Source Sans Pro', sans-serif;
+	}
+	
+	</style>
+	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -23,16 +35,22 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+	    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/swift.png"></img>
 	</div><!-- header -->
 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Vestiging', 'url'=>array('/vestiging'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Intecedent', 'url'=>array('/intecedent'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Uitzendkrachten', 'url'=>array('/uitzendkracht'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Bedrijven', 'url'=>array('/Bedrijfrelatie'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Contactpersonen', 'url'=>array('/Bedrijfrelatiecontact'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Werksoort', 'url'=>array('/Werksoort'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Jobs', 'url'=>array('/Jobfunctie'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Contract', 'url'=>array('/Contract'), 'visible'=>!Yii::app()->user->isGuest),
+             
+            array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
