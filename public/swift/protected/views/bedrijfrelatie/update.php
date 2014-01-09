@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Bedrijfrelatie', 'url'=>array('index')),
-	array('label'=>'Create Bedrijfrelatie', 'url'=>array('create')),
-	array('label'=>'View Bedrijfrelatie', 'url'=>array('view', 'id'=>$model->idBedrijfRelatie)),
-	array('label'=>'Manage Bedrijfrelatie', 'url'=>array('admin')),
+	array('label'=>'Lijst Bedrijfrelatie', 'url'=>array('index')),
+	array('label'=>'Maak Bedrijfrelatie', 'url'=>array('create')),
+	array('label'=>'Bekijk Bedrijfrelatie', 'url'=>array('view', 'id'=>$model->idBedrijfRelatie)),
+	array('label'=>'Beheer Bedrijfrelatie', 'url'=>array('admin')),
 );
 ?>
 

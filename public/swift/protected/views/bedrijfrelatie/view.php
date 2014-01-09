@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Bedrijfrelatie', 'url'=>array('index')),
-	array('label'=>'Create Bedrijfrelatie', 'url'=>array('create')),
+	array('label'=>'Lijst Bedrijfrelatie', 'url'=>array('index')),
+	array('label'=>'Maak Bedrijfrelatie', 'url'=>array('create')),
 	array('label'=>'Update Bedrijfrelatie', 'url'=>array('update', 'id'=>$model->idBedrijfRelatie)),
-	array('label'=>'Delete Bedrijfrelatie', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idBedrijfRelatie),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Bedrijfrelatie', 'url'=>array('admin')),
+	array('label'=>'Verwijder Bedrijfrelatie', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idBedrijfRelatie),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Beheer Bedrijfrelatie', 'url'=>array('admin')),
 );
 ?>
 

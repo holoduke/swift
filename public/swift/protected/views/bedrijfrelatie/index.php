@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Bedrijfrelatie', 'url'=>array('create')),
-	array('label'=>'Manage Bedrijfrelatie', 'url'=>array('admin')),
+	array('label'=>'Maak Bedrijfrelatie', 'url'=>array('create')),
+	array('label'=>'Beheer Bedrijfrelatie', 'url'=>array('admin')),
 );
 ?>
 
