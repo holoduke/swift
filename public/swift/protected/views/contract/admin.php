@@ -3,13 +3,13 @@
 /* @var $model Contract */
 
 $this->breadcrumbs=array(
-	'Contracts'=>array('index'),
+	'Contracten'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List Contract', 'url'=>array('index')),
-	array('label'=>'Create Contract', 'url'=>array('create')),
+	array('label'=>'Lijst Contracten', 'url'=>array('index')),
+	array('label'=>'Beheer Contract', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

@@ -3,7 +3,7 @@
 /* @var $model Intecedent */
 
 $this->breadcrumbs=array(
-	'Intecedents'=>array('index'),
+	'Intecedenten'=>array('index'),
 	'Manage',
 );
 

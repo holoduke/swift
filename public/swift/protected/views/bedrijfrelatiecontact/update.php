@@ -3,16 +3,16 @@
 /* @var $model Bedrijfrelatiecontact */
 
 $this->breadcrumbs=array(
-	'Bedrijfrelatiecontacts'=>array('index'),
+	'Bedrijfrelatiecontacten'=>array('index'),
 	$model->idBedrijfRelatieContact=>array('view','id'=>$model->idBedrijfRelatieContact),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Bedrijfrelatiecontact', 'url'=>array('index')),
-	array('label'=>'Create Bedrijfrelatiecontact', 'url'=>array('create')),
-	array('label'=>'View Bedrijfrelatiecontact', 'url'=>array('view', 'id'=>$model->idBedrijfRelatieContact)),
-	array('label'=>'Manage Bedrijfrelatiecontact', 'url'=>array('admin')),
+	array('label'=>'Lijst Bedrijfrelatiecontacten', 'url'=>array('index')),
+	array('label'=>'Maak Bedrijfrelatiecontact', 'url'=>array('create')),
+	array('label'=>'Bekijk Bedrijfrelatiecontact', 'url'=>array('view', 'id'=>$model->idBedrijfRelatieContact)),
+	array('label'=>'Beheer Bedrijfrelatiecontact', 'url'=>array('admin')),
 );
 ?>
 

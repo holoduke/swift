@@ -3,12 +3,12 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Bedrijfrelatiecontacts',
+	'Bedrijfrelatiecontacten',
 );
 
 $this->menu=array(
-	array('label'=>'Create Bedrijfrelatiecontact', 'url'=>array('create')),
-	array('label'=>'Manage Bedrijfrelatiecontact', 'url'=>array('admin')),
+	array('label'=>'Maak Bedrijfrelatiecontact', 'url'=>array('create')),
+	array('label'=>'Beheer Bedrijfrelatiecontact', 'url'=>array('admin')),
 );
 ?>
 

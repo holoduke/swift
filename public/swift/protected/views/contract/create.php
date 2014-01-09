@@ -3,13 +3,13 @@
 /* @var $model Contract */
 
 $this->breadcrumbs=array(
-	'Contracts'=>array('index'),
+	'Contracten'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List Contract', 'url'=>array('index')),
-	array('label'=>'Manage Contract', 'url'=>array('admin')),
+	array('label'=>'Lijst Contracten', 'url'=>array('index')),
+	array('label'=>'Beheer Contract', 'url'=>array('admin')),
 );
 ?>
 

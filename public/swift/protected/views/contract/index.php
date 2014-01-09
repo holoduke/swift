@@ -3,12 +3,12 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Contracts',
+	'Contracten',
 );
 
 $this->menu=array(
-	array('label'=>'Create Contract', 'url'=>array('create')),
-	array('label'=>'Manage Contract', 'url'=>array('admin')),
+	array('label'=>'Maak Contract', 'url'=>array('create')),
+	array('label'=>'Beheer Contract', 'url'=>array('admin')),
 );
 ?>
 
