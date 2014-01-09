@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Vestiging', 'url'=>array('index')),
-	array('label'=>'Create Vestiging', 'url'=>array('create')),
+	array('label'=>'Lijst weergave', 'url'=>array('index')),
+	array('label'=>'Maak Vestiging', 'url'=>array('create')),
 	array('label'=>'Update Vestiging', 'url'=>array('update', 'id'=>$model->idVestiging)),
-	array('label'=>'Delete Vestiging', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idVestiging),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Vestiging', 'url'=>array('admin')),
+	array('label'=>'Verwijder Vestiging', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idVestiging),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Beheer Vestiging', 'url'=>array('admin')),
 );
 ?>
 

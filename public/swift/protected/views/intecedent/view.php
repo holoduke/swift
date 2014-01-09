@@ -3,16 +3,16 @@
 /* @var $model Intecedent */
 
 $this->breadcrumbs=array(
-	'Intecedents'=>array('index'),
+	'Intecedenten'=>array('index'),
 	$model->idIntecedent,
 );
 
 $this->menu=array(
-	array('label'=>'List Intecedent', 'url'=>array('index')),
-	array('label'=>'Create Intecedent', 'url'=>array('create')),
+	array('label'=>'Lijst Intecedente', 'url'=>array('index')),
+	array('label'=>'Maak Intecedent', 'url'=>array('create')),
 	array('label'=>'Update Intecedent', 'url'=>array('update', 'id'=>$model->idIntecedent)),
-	array('label'=>'Delete Intecedent', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idIntecedent),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Intecedent', 'url'=>array('admin')),
+	array('label'=>'Verwijder Intecedent', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idIntecedent),'confirm'=>'Weet je het zeker?')),
+	array('label'=>'Beheer Intecedent', 'url'=>array('admin')),
 );
 ?>
 

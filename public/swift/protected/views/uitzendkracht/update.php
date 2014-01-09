@@ -3,16 +3,16 @@
 /* @var $model Uitzendkracht */
 
 $this->breadcrumbs=array(
-	'Uitzendkrachts'=>array('index'),
+	'Uitzendkrachten'=>array('index'),
 	$model->idUitzendkracht=>array('view','id'=>$model->idUitzendkracht),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Uitzendkracht', 'url'=>array('index')),
-	array('label'=>'Create Uitzendkracht', 'url'=>array('create')),
-	array('label'=>'View Uitzendkracht', 'url'=>array('view', 'id'=>$model->idUitzendkracht)),
-	array('label'=>'Manage Uitzendkracht', 'url'=>array('admin')),
+	array('label'=>'Lijst Uitzendkracht', 'url'=>array('index')),
+	array('label'=>'Maak Uitzendkracht', 'url'=>array('create')),
+	array('label'=>'Bekijk Uitzendkracht', 'url'=>array('view', 'id'=>$model->idUitzendkracht)),
+	array('label'=>'Beheer Uitzendkracht', 'url'=>array('admin')),
 );
 ?>
 

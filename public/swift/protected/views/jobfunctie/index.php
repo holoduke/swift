@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Jobfunctie', 'url'=>array('create')),
-	array('label'=>'Manage Jobfunctie', 'url'=>array('admin')),
+	array('label'=>'Maak Jobfunctie', 'url'=>array('create')),
+	array('label'=>'Beheer Jobfunctie', 'url'=>array('admin')),
 );
 ?>
 

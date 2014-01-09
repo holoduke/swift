@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Jobfunctie', 'url'=>array('index')),
-	array('label'=>'Create Jobfunctie', 'url'=>array('create')),
-	array('label'=>'View Jobfunctie', 'url'=>array('view', 'id'=>$model->idJobFunctie)),
-	array('label'=>'Manage Jobfunctie', 'url'=>array('admin')),
+	array('label'=>'Lijst Jobfuncties', 'url'=>array('index')),
+	array('label'=>'Maak Jobfunctie', 'url'=>array('create')),
+	array('label'=>'Bekijk Jobfunctie', 'url'=>array('view', 'id'=>$model->idJobFunctie)),
+	array('label'=>'Beheer Jobfunctie', 'url'=>array('admin')),
 );
 ?>
 

@@ -3,13 +3,13 @@
 /* @var $model Uitzendkracht */
 
 $this->breadcrumbs=array(
-	'Uitzendkrachts'=>array('index'),
+	'Uitzendkrachten'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List Uitzendkracht', 'url'=>array('index')),
-	array('label'=>'Manage Uitzendkracht', 'url'=>array('admin')),
+	array('label'=>'Lijst Uitzendkrachten', 'url'=>array('index')),
+	array('label'=>'Beheer Uitzendkracht', 'url'=>array('admin')),
 );
 ?>
 

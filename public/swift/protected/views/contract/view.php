@@ -3,7 +3,7 @@
 /* @var $model Contract */
 
 $this->breadcrumbs=array(
-	'Contracts'=>array('index'),
+	'Contracten'=>array('index'),
 	$model->idContract,
 );
 

@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Intecedent', 'url'=>array('index')),
-	array('label'=>'Create Intecedent', 'url'=>array('create')),
+	array('label'=>'Lijst Intecedenten', 'url'=>array('index')),
+	array('label'=>'Maak Intecedent', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

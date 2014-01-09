@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Jobfunctie', 'url'=>array('index')),
-	array('label'=>'Create Jobfunctie', 'url'=>array('create')),
+	array('label'=>'Lijst Jobfunctie', 'url'=>array('index')),
+	array('label'=>'Maak Jobfunctie', 'url'=>array('create')),
 	array('label'=>'Update Jobfunctie', 'url'=>array('update', 'id'=>$model->idJobFunctie)),
-	array('label'=>'Delete Jobfunctie', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idJobFunctie),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Jobfunctie', 'url'=>array('admin')),
+	array('label'=>'Verwijder Jobfunctie', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idJobFunctie),'confirm'=>'Weet je het zeker?')),
+	array('label'=>'Beheer Jobfunctie', 'url'=>array('admin')),
 );
 ?>
 

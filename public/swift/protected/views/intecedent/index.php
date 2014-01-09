@@ -3,12 +3,12 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Intecedents',
+	'Intecedenten',
 );
 
 $this->menu=array(
-	array('label'=>'Create Intecedent', 'url'=>array('create')),
-	array('label'=>'Manage Intecedent', 'url'=>array('admin')),
+	array('label'=>'Maak Intecedent', 'url'=>array('create')),
+	array('label'=>'Beheer Intecedent', 'url'=>array('admin')),
 );
 ?>
 

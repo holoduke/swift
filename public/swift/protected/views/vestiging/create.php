@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Vestiging', 'url'=>array('index')),
-	array('label'=>'Manage Vestiging', 'url'=>array('admin')),
+	array('label'=>'Lijst weergave', 'url'=>array('index')),
+	array('label'=>'Beheer Vestiging', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Vestiging</h1>
+<h1>Maak Vestiging</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

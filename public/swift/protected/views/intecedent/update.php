@@ -3,13 +3,13 @@
 /* @var $model Intecedent */
 
 $this->breadcrumbs=array(
-	'Intecedents'=>array('index'),
+	'Intecedenten'=>array('index'),
 	$model->idIntecedent=>array('view','id'=>$model->idIntecedent),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Intecedent', 'url'=>array('index')),
+	array('label'=>'Lijst Intecedenten', 'url'=>array('index')),
 	array('label'=>'Create Intecedent', 'url'=>array('create')),
 	array('label'=>'View Intecedent', 'url'=>array('view', 'id'=>$model->idIntecedent)),
 	array('label'=>'Manage Intecedent', 'url'=>array('admin')),

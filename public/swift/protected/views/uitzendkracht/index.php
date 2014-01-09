@@ -3,12 +3,12 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Uitzendkrachts',
+	'Uitzendkrachten',
 );
 
 $this->menu=array(
-	array('label'=>'Create Uitzendkracht', 'url'=>array('create')),
-	array('label'=>'Manage Uitzendkracht', 'url'=>array('admin')),
+	array('label'=>'Maak Uitzendkracht', 'url'=>array('create')),
+	array('label'=>'Beheer Uitzendkracht', 'url'=>array('admin')),
 );
 ?>
 
