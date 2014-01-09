@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Vestiging #<?php echo $model->idVestiging; ?></h1>
+<h1>Bekijk Vestiging #<?php echo $model->idVestiging; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

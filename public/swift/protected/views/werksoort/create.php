@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Werksoort', 'url'=>array('index')),
-	array('label'=>'Manage Werksoort', 'url'=>array('admin')),
+	array('label'=>'Lijst weergave', 'url'=>array('index')),
+	array('label'=>'Beheer werksoorten', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Werksoort</h1>
+<h1>Maak Werksoort</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,12 +3,12 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Werksoorts',
+	'Werksoorten',
 );
 
 $this->menu=array(
-	array('label'=>'Create Werksoort', 'url'=>array('create')),
-	array('label'=>'Manage Werksoort', 'url'=>array('admin')),
+	array('label'=>'Maak Werksoort', 'url'=>array('create')),
+	array('label'=>'Beheer Werksoort', 'url'=>array('admin')),
 );
 ?>
 

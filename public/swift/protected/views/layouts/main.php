@@ -41,14 +41,14 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Vestiging', 'url'=>array('/vestiging'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Intecedent', 'url'=>array('/intecedent'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Vestigingen', 'url'=>array('/vestiging'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Intecedenten', 'url'=>array('/intecedent'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Uitzendkrachten', 'url'=>array('/uitzendkracht'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Bedrijven', 'url'=>array('/Bedrijfrelatie'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Contactpersonen', 'url'=>array('/Bedrijfrelatiecontact'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Werksoort', 'url'=>array('/Werksoort'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Werksoorten', 'url'=>array('/Werksoort'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Jobs', 'url'=>array('/Jobfunctie'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Contract', 'url'=>array('/Contract'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Contracten', 'url'=>array('/Contract'), 'visible'=>!Yii::app()->user->isGuest),
              
             array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

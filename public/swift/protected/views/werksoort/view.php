@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Werksoort', 'url'=>array('index')),
-	array('label'=>'Create Werksoort', 'url'=>array('create')),
+	array('label'=>'Lijst weergave', 'url'=>array('index')),
+	array('label'=>'Maak Werksoort', 'url'=>array('create')),
 	array('label'=>'Update Werksoort', 'url'=>array('update', 'id'=>$model->idWerkSoort)),
-	array('label'=>'Delete Werksoort', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idWerkSoort),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Werksoort', 'url'=>array('admin')),
+	array('label'=>'Verwijder Werksoort', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idWerkSoort),'confirm'=>'Weet je het zeker?')),
+	array('label'=>'Beheer Werksoort', 'url'=>array('admin')),
 );
 ?>
 

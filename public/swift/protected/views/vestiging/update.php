@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Vestiging', 'url'=>array('index')),
-	array('label'=>'Create Vestiging', 'url'=>array('create')),
-	array('label'=>'View Vestiging', 'url'=>array('view', 'id'=>$model->idVestiging)),
-	array('label'=>'Manage Vestiging', 'url'=>array('admin')),
+	array('label'=>'Lijst weergave', 'url'=>array('index')),
+	array('label'=>'Maak Vestiging', 'url'=>array('create')),
+	array('label'=>'Bekijk Vestiging', 'url'=>array('view', 'id'=>$model->idVestiging)),
+	array('label'=>'Beheer Vestiging', 'url'=>array('admin')),
 );
 ?>
 

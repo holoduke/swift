@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Werksoort', 'url'=>array('index')),
-	array('label'=>'Create Werksoort', 'url'=>array('create')),
+	array('label'=>'Lijst weergave', 'url'=>array('index')),
+	array('label'=>'Maak Werksoort', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Werksoorts</h1>
+<h1>Beheer Werksoorten</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

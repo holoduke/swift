@@ -3,12 +3,12 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Vestigingsbeheer',
+	'Vestigingen',
 );
 
 $this->menu=array(
-	array('label'=>'Create Vestiging', 'url'=>array('create')),
-	array('label'=>'Manage Vestiging', 'url'=>array('admin')),
+	array('label'=>'Maak Vestiging', 'url'=>array('create')),
+	array('label'=>'Beheer Vestiging', 'url'=>array('admin')),
 );
 ?>
 

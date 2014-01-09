@@ -3,16 +3,16 @@
 /* @var $model Werksoort */
 
 $this->breadcrumbs=array(
-	'Werksoorts'=>array('index'),
+	'Werksoorten'=>array('index'),
 	$model->idWerkSoort=>array('view','id'=>$model->idWerkSoort),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Werksoort', 'url'=>array('index')),
-	array('label'=>'Create Werksoort', 'url'=>array('create')),
-	array('label'=>'View Werksoort', 'url'=>array('view', 'id'=>$model->idWerkSoort)),
-	array('label'=>'Manage Werksoort', 'url'=>array('admin')),
+	array('label'=>'Lijst weergave', 'url'=>array('index')),
+	array('label'=>'Maak Werksoort', 'url'=>array('create')),
+	array('label'=>'Bekijk Werksoort', 'url'=>array('view', 'id'=>$model->idWerkSoort)),
+	array('label'=>'Beheer Werksoort', 'url'=>array('admin')),
 );
 ?>
 
