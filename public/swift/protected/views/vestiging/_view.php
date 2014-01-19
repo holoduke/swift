@@ -6,15 +6,6 @@
 
 <div class="view row">
 
-    <div class="col-md-4">
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idVestiging')); ?>:</b>
-	</div>
-	
-	<div class="col-md-8">
-	<?php echo CHtml::link(CHtml::encode($data->idVestiging), array('view', 'id'=>$data->idVestiging)); ?>
-	</div>
-
-	
 	<div class="col-md-4">
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Naam')); ?>:</b>
 	</div>
