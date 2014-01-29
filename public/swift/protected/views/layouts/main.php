@@ -20,6 +20,14 @@
 	
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap/css/bootstrap.min.css"/>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/css/val.js"></script>
+	
+	
+	
+	
+	
 	<style>
 	body{
 	font-family: 'Source Sans Pro', sans-serif;
