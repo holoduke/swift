@@ -2,61 +2,64 @@
 /* @var $this JobfunctieController */
 /* @var $model Jobfunctie */
 
-$this->breadcrumbs=array(
-	'Jobfuncties'=>array('index'),
-	'Manage',
+$this->breadcrumbs = array(
+    'Jobs' => array('admin'),
 );
 
-$this->menu=array(
-	array('label'=>'List Jobfunctie', 'url'=>array('index')),
-	array('label'=>'Create Jobfunctie', 'url'=>array('create')),
+$this->menu = array(
+array('label' => 'Lijst Job', 'url' => array('index')),
+ array('label' => 'Maak Job', 'url' => array('create')),
+ array('label' => 'Beheer Job', 'url' => array('admin')),
 );
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#jobfunctie-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
-<h1>Manage Jobfuncties</h1>
+<h1>Beheer Jobs</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<div id = "tabs">
+<ul>
+<li><a href = "#fragment-1">Actief</a></li>
+<li><a href = "#fragment-2">Inactief</a></li>
+</ul>
+<div id = "fragment-1">
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'id' => 'vestiging-grid',
+    'dataProvider' => $model->search(1),
+    'filter' => $model,
+    'columns' => array(
+        'idJobFunctie',
+        'AantalPersonen',
+        'StartDatum',
+        'Uren',
+        'UurTarief',
+        array(
+            'class' => 'CButtonColumn',
+        ),
+    ),
+));
+?>
+</div>
+<div id="fragment-2">
+   <?php
+   $this->widget('zii.widgets.grid.CGridView', array(
+       'id' => 'vestiging-grid2',
+       'dataProvider' => $model->search(0),
+       'filter' => $model,
+       'columns' => array(
+           'idJobFunctie',
+           'AantalPersonen',
+           'StartDatum',
+           'Uren',
+           'UurTarief',
+           array(
+               'class' => 'CButtonColumn',
+           ),
+       ),
+   ));
+   ?>
+</div>
+</div>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'jobfunctie-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'idJobFunctie',
-		'AantalPersonen',
-		'StartDatum',
-		'Uren',
-		'UurTarief',
-       array
-            (
-                  'name'=>'WerkSoort_idWerkSoort',
-                  'value'=>'Werksoort::model()->findByPk($data->WerkSoort_idWerkSoort)->Naam',
-            ),
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-)); ?>
+<script>
+   $("#tabs").tabs({active: 0});
+</script>

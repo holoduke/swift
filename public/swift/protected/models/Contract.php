@@ -48,10 +48,11 @@ class Contract extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('JobFunctie_idJobFunctie, BedrijfRelatie_idBedrijfRelatie, Uitzendkracht_idUitzendkracht, Intecedent_idIntecedent', 'required'),
+			array('StartDatum, UurTarief, UurLoon, JobFunctie_idJobFunctie, BedrijfRelatie_idBedrijfRelatie, Uitzendkracht_idUitzendkracht, Intecedent_idIntecedent', 'required'),
 			array('JobFunctie_idJobFunctie, BedrijfRelatie_idBedrijfRelatie, Uitzendkracht_idUitzendkracht, Intecedent_idIntecedent', 'numerical', 'integerOnly'=>true),
 			array('UurTarief, UurLoon', 'numerical'),
-			array('StartDatum', 'length', 'max'=>45),
+			array('StavrtDatum', 'length', 'max'=>45),
+          array('Active', 'boolean'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idContract, StartDatum, UurTarief, UurLoon, JobFunctie_idJobFunctie, BedrijfRelatie_idBedrijfRelatie, Uitzendkracht_idUitzendkracht, Intecedent_idIntecedent', 'safe', 'on'=>'search'),
@@ -80,14 +81,16 @@ class Contract extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idContract' => 'Id Contract',
+			'idContract' => 'Id',
 			'StartDatum' => 'Start Datum',
 			'UurTarief' => 'Uur Tarief',
 			'UurLoon' => 'Uur Loon',
-			'JobFunctie_idJobFunctie' => 'Job Functie Id Job Functie',
-			'BedrijfRelatie_idBedrijfRelatie' => 'Bedrijf Relatie Id Bedrijf Relatie',
-			'Uitzendkracht_idUitzendkracht' => 'Uitzendkracht Id Uitzendkracht',
-			'Intecedent_idIntecedent' => 'Intecedent Id Intecedent',
+			'JobFunctie_idJobFunctie' => 'Job',
+			'BedrijfRelatie_idBedrijfRelatie' => 'Bedrijf Relatie',
+			'Uitzendkracht_idUitzendkracht' => 'Uitzendkracht',
+			'Intecedent_idIntecedent' => 'Intecedent',
+                   'Active' => 'Actief',
+
 		);
 	}
 
@@ -95,7 +98,7 @@ class Contract extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function search()
+	public function search($para = '0')
 	{
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
@@ -110,6 +113,7 @@ class Contract extends CActiveRecord
 		$criteria->compare('BedrijfRelatie_idBedrijfRelatie',$this->BedrijfRelatie_idBedrijfRelatie);
 		$criteria->compare('Uitzendkracht_idUitzendkracht',$this->Uitzendkracht_idUitzendkracht);
 		$criteria->compare('Intecedent_idIntecedent',$this->Intecedent_idIntecedent);
+		$criteria->compare('Active',$para, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

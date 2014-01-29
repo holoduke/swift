@@ -2,14 +2,14 @@
 /* @var $this IntecedentController */
 /* @var $model Intecedent */
 
-$this->breadcrumbs=array(
-	'Intecedenten'=>array('index'),
-	'Manage',
+$this->breadcrumbs = array(
+    'Intecedenten' => array('admin'),
 );
 
-$this->menu=array(
-	array('label'=>'Lijst Intecedenten', 'url'=>array('index')),
-	array('label'=>'Maak Intecedent', 'url'=>array('create')),
+$this->menu = array(
+    array('label' => 'Meer informatie', 'url' => array('index')),
+    array('label' => 'Maak Intecedent', 'url' => array('create')),
+    array('label' => 'Beheer Intecedent', 'url' => array('admin')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,38 +26,55 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Intecedents</h1>
+<h1>Beheer Intecedenten</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<div id="tabs">
+   <ul>
+      <li><a href="#fragment-1">Actief</a></li>
+      <li><a href="#fragment-2">Inactief</a></li>
+   </ul>
+   <div id="fragment-1">
+      <?php
+      $this->widget('zii.widgets.grid.CGridView', array(
+          'id' => 'vestiging-grid',
+          'dataProvider' => $model->search(1),
+          'filter' => $model,
+          'columns' => array(
+              'idIntecedent',
+              'Naam',
+              'Adres',
+              'Woonplaats',
+              'Telefoon',
+              'EMail',
+              array(
+                  'class' => 'CButtonColumn',
+              ),
+          ),
+      ));
+      ?>
+   </div>
+   <div id="fragment-2">
+      <?php
+      $this->widget('zii.widgets.grid.CGridView', array(
+          'id' => 'vestiging-grid2',
+          'dataProvider' => $model->search(0),
+          'filter' => $model,
+          'columns' => array(
+              'idIntecedent',
+              'Naam',
+              'Adres',
+              'Woonplaats',
+              'Telefoon',
+              'EMail',
+              array(
+                  'class' => 'CButtonColumn',
+              ),
+          ),
+      ));
+      ?>
+   </div>
+</div>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'intecedent-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'idIntecedent',
-		'Naam',
-		'Adres',
-		'Woonplaats',
-		'Telefoon',
-		'EMail',
-		/*
-		'Geslacht',
-		'IsBeheerder',
-		'Vestiging_idVestiging',
-		*/
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-)); ?>
+<script>
+   $("#tabs").tabs({active: 0});
+</script>

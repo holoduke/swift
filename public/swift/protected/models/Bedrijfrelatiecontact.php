@@ -46,10 +46,11 @@ class Bedrijfrelatiecontact extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('BedrijfRelatie_idBedrijfRelatie, Intecedent_idIntecedent', 'required'),
+			array('Voorletters, Achternaam, Geslacht, Functie, Telefoon, EMail, BedrijfRelatie_idBedrijfRelatie, Intecedent_idIntecedent', 'required'),
 			array('BedrijfRelatie_idBedrijfRelatie, Intecedent_idIntecedent', 'numerical', 'integerOnly'=>true),
 			array('Voorletters, Achternaam, Functie, Telefoon, EMail', 'length', 'max'=>45),
 			array('Geslacht', 'length', 'max'=>1),
+          array('Active', 'boolean'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idBedrijfRelatieContact, Voorletters, Achternaam, Geslacht, Functie, Telefoon, EMail, BedrijfRelatie_idBedrijfRelatie, Intecedent_idIntecedent', 'safe', 'on'=>'search'),
@@ -75,15 +76,16 @@ class Bedrijfrelatiecontact extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idBedrijfRelatieContact' => 'Id Bedrijf Relatie Contact',
+			'idBedrijfRelatieContact' => 'Id',
 			'Voorletters' => 'Voorletters',
 			'Achternaam' => 'Achternaam',
 			'Geslacht' => 'Geslacht',
 			'Functie' => 'Functie',
 			'Telefoon' => 'Telefoon',
 			'EMail' => 'Email',
-			'BedrijfRelatie_idBedrijfRelatie' => 'Bedrijf Relatie Id Bedrijf Relatie',
-			'Intecedent_idIntecedent' => 'Intecedent Id Intecedent',
+			'BedrijfRelatie_idBedrijfRelatie' => 'Bedrijf',
+			'Intecedent_idIntecedent' => 'Intecedent',
+         'Active' => 'Actief',
 		);
 	}
 
@@ -91,7 +93,7 @@ class Bedrijfrelatiecontact extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function search()
+	public function search($para = '0')
 	{
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
@@ -107,6 +109,7 @@ class Bedrijfrelatiecontact extends CActiveRecord
 		$criteria->compare('EMail',$this->EMail,true);
 		$criteria->compare('BedrijfRelatie_idBedrijfRelatie',$this->BedrijfRelatie_idBedrijfRelatie);
 		$criteria->compare('Intecedent_idIntecedent',$this->Intecedent_idIntecedent);
+		$criteria->compare('Active',$para,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -10,6 +10,7 @@
  * @property string $Postcode
  * @property string $Woonplaats
  * @property string $KVKId
+ * @property boolean $Active
  *
  * The followings are the available model relations:
  * @property Bedrijfrelatiecontact[] $bedrijfrelatiecontacts
@@ -43,10 +44,12 @@ class Bedrijfrelatie extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+         array('Naam, Adres, Postcode, Woonplaats, KVKId', 'required'),
 			array('Naam, Adres, Postcode, Woonplaats, KVKId', 'length', 'max'=>45),
+			array('Active', 'boolean'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idBedrijfRelatie, Naam, Adres, Postcode, Woonplaats, KVKId', 'safe', 'on'=>'search'),
+			array('Naam, Adres, Postcode, Woonplaats, KVKId', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,12 +72,13 @@ class Bedrijfrelatie extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idBedrijfRelatie' => 'Id Bedrijf Relatie',
+			'idBedrijfRelatie' => 'Id',
 			'Naam' => 'Naam',
 			'Adres' => 'Adres',
 			'Postcode' => 'Postcode',
 			'Woonplaats' => 'Woonplaats',
 			'KVKId' => 'KVK nummer',
+			'Active' => 'Actief',
 		);
 	}
 
@@ -82,7 +86,7 @@ class Bedrijfrelatie extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function search()
+	public function search($para = '0')
 	{
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
@@ -95,6 +99,7 @@ class Bedrijfrelatie extends CActiveRecord
 		$criteria->compare('Postcode',$this->Postcode,true);
 		$criteria->compare('Woonplaats',$this->Woonplaats,true);
 		$criteria->compare('KVKId',$this->KVKId,true);
+		$criteria->compare('Active',$para,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

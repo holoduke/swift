@@ -42,8 +42,10 @@ class Werksoort extends CActiveRecord
 		return array(
 			array('Naam', 'length', 'max'=>45),
 			array('Omschrijving', 'length', 'max'=>128),
+          array('Active', 'boolean'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
+			array('Naam, Omschrijving', 'required'),
 			array('idWerkSoort, Naam, Omschrijving', 'safe', 'on'=>'search'),
 		);
 	}
@@ -67,9 +69,11 @@ class Werksoort extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idWerkSoort' => 'Id Werk Soort',
+			'idWerkSoort' => 'Id',
 			'Naam' => 'Naam',
 			'Omschrijving' => 'Omschrijving',
+                   'Active' => 'Actief',
+
 		);
 	}
 
@@ -77,7 +81,7 @@ class Werksoort extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function search()
+	public function search($para = '0')
 	{
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
@@ -87,6 +91,7 @@ class Werksoort extends CActiveRecord
 		$criteria->compare('idWerkSoort',$this->idWerkSoort);
 		$criteria->compare('Naam',$this->Naam,true);
 		$criteria->compare('Omschrijving',$this->Omschrijving,true);
+		$criteria->compare('Active',$para,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

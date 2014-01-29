@@ -1,157 +1,226 @@
 body
 {
-	margin: 0;
-	padding: 0;
-	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: white;
+   margin: 0;
+   padding: 0;
+   color: #555;
+   font: normal 10pt Arial,Helvetica,sans-serif;
+   background: white;
+   overflow-y: scroll;
 }
 
 #page
 {
-	margin-top: 5px;
-	margin-bottom: 5px;
-	background: white;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   background: white;
 }
 
 #header
 {
-	margin: 0;
-	padding: 0;
+   margin: 0;
+   padding: 0;
 }
 
 #content
 {
-    padding: 20px;
+   padding: 20px;
 }
 
 #sidebar
 {
-	padding: 20px 20px 20px 0;
-	margin-top:-30px;
+   margin-top:-30px;
 }
 
 #footer
 {
-	padding: 10px;
-	margin: 10px 20px;
-	font-size: 0.8em;
-	text-align: center;
-	border-top: 1px solid #C9E0ED;
+   padding: 10px;
+   margin: 10px 20px;
+   font-size: 0.8em;
+   text-align: center;
+   border-top: 1px solid #C9E0ED;
 }
 
 #logo
 {
-	padding: 10px 20px;
-	font-size: 200%;
+   padding: 10px 20px;
+   font-size: 200%;
 }
 
 #mainmenu
 {
-	background:#CD2929;
+   background:#CD2929;
 }
 
-#mainmenu ul
+/*#mainmenu ul#nav
 {
-	padding:10px;
-	margin:0;
+   padding:10px;
+   margin:0;
 }
 
-#mainmenu ul li
+#mainmenu ul > li
 {
-	display: inline;
-	margin:0;
+   margin:0;
+      display: inline;
 }
 
-#mainmenu ul li a
+#mainmenu ul > li a
 {
-	color:#ffffff;
-	background-color:transparent;
-	font-size:12px;
-	font-weight:bold;
-	padding:10px;
+   color:#ffffff;
+   background-color:transparent;
+   font-size:12px;
+   font-weight:bold;
+   padding:10px;
+}
+
+#mainmenu li.parent > ul 
+{
+   position:relative;
+}
+#mainmenu li.parent  > ul > li
+{
+   display: block;
 }
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
-	background-color:#555;
-	text-decoration:none;
+   background-color:#555;
+   text-decoration:none;
+}*/
+
+#mainmenu {
+   text-align: center;
+   font-size: 1.2em;
 }
+
+#mainmenu ul ul {
+   display: none;
+}
+
+#mainmenu ul li:hover > ul {
+   display: block;
+}
+
+#mainmenu ul {
+   list-style: none;
+   position: relative;
+}
+#mainmenu ul:after {
+   content: ""; clear: both; display: block;
+}
+
+#mainmenu ul li {
+   float: left;
+}
+#mainmenu ul li:hover {
+   background: #4b545f;
+}
+#mainmenu ul li:hover a {
+   color: #fff;
+}
+
+#mainmenu ul li a {
+   display: block; padding: 10px;
+   color: white; text-decoration: none;
+}
+
+
+#mainmenu ul ul {
+   background: #5f6975; border-radius: 0; padding: 0;
+   position: absolute; top: 100%;
+}
+#mainmenu ul ul li {
+   float: none; 
+   border-top: 1px solid #6b727c;
+   border-bottom: 1px solid #575f6a; position: relative;
+}
+#mainmenu ul ul li a {
+   padding: 15px 40px;
+   color: #fff;
+}	
+#mainmenu ul ul li a:hover {
+   background: #4b545f;
+}
+
+#mainmenu ul ul ul {
+   position: absolute; left: 100%; top:0;
+}
+
+
 
 div.flash-error, div.flash-notice, div.flash-success
 {
-	padding:.8em;
-	margin-bottom:1em;
-	border:2px solid #ddd;
+   padding:.8em;
+   margin-bottom:1em;
+   border:2px solid #eee;
 }
 
 div.flash-error
 {
-	background:#FBE3E4;
-	color:#8a1f11;
-	border-color:#FBC2C4;
+   background:#FBE3E4;
+   color:#8a1f11;
+   border-color:#FBC2C4;
 }
 
 div.flash-notice
 {
-	background:#FFF6BF;
-	color:#514721;
-	border-color:#FFD324;
+   background:#FFF6BF;
+   color:#514721;
+   border-color:#FFD324;
 }
 
 div.flash-success
 {
-	background:#E6EFC2;
-	color:#264409;
-	border-color:#C6D880;
+   background:#E6EFC2;
+   color:#264409;
+   border-color:#C6D880;
 }
 
 div.flash-error a
 {
-	color:#8a1f11;
+   color:#8a1f11;
 }
 
 div.flash-notice a
 {
-	color:#514721;
+   color:#514721;
 }
 
 div.flash-success a
 {
-	color:#264409;
+   color:#264409;
 }
 
 div.form .rememberMe label
 {
-	display: inline;
+   display: inline;
 }
 
 div.view
 {
-	padding: 10px;
-	margin: 10px 0;
-	border-top: 1px solid #C9E0ED;
+   padding: 10px;
+   margin: 10px 0;
+   border-top: 1px solid #C9E0ED;
 }
 
 .test div.view + div.view { border-top: 1px solid black;  }
 
 div.breadcrumbs
 {
-	font-size: 0.9em;
-	padding: 5px 20px;
-	margin-top:10px;
+   font-size: 0.9em;
+   padding: 5px 20px;
+   margin-top:10px;
 }
 
 div.breadcrumbs span
 {
-	font-weight: bold;
+   font-weight: bold;
 }
 
 div.search-form
 {
-	padding: 10px;
-	margin: 10px 0;
-	background: #eee;
+   padding: 10px;
+   margin: 10px 0;
+   background: #eee;
 }
 
 .portlet
@@ -161,76 +230,117 @@ div.search-form
 
 .portlet-decoration
 {
-	padding: 3px 8px;
-	background: #B7D6E7;
-	border-left: 5px solid #6FACCF;
+   padding: 3px 8px;
+   background: rgb(205, 41, 41);
 }
 
 .portlet-title
 {
-	font-size: 12px;
-	font-weight: bold;
-	padding: 0;
-	margin: 0;
-	color: #298dcd;
+   font-weight: bold;
+   padding: 0;
+   margin: 0;
+   color: white;
 }
 
 .portlet-content
 {
-	font-size:0.9em;
-	margin: 0 0 15px 0;
-	padding: 5px 8px;
-	background:#EFFDFF;
+   margin: 0 0 15px 0;
+   padding: 5px 8px;
+   background:rgba(0, 0, 0, 0.1);
 }
 
 .portlet-content ul
 {
-	list-style-image:none;
-	list-style-position:outside;
-	list-style-type:none;
-	margin: 0;
-	padding: 0;
+   list-style-image:none;
+   list-style-position:outside;
+   list-style-type:none;
+   margin: 0;
+   padding: 0;
 }
 
 .portlet-content li
 {
-	padding: 2px 0 4px 0px;
 }
 
 .operations
 {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
 }
 
 .operations li
 {
-	padding-bottom: 2px;
 }
 
 .operations li a
 {
-	font: bold 12px Arial;
-	color: #0066A4;
-	display: block;
-	padding: 2px 0 2px 8px;
-	line-height: 15px;
-	text-decoration: none;
-}
-
-.operations li a:visited
-{
-	color: #0066A4;
+   color: black;
+   display: block;
+   padding: 4px;
+   text-decoration: none;
 }
 
 .operations li a:hover
 {
-	background: #80CFFF;
+   background: rgba(0, 0, 0, 0.1);;
 }
 
 thead {
-   
+
    background: #6FACCF;
    color:white;
+}
+
+.ui-tabs-nav {
+   border-bottom:2px solid #eee;
+}
+
+.ui-tabs-active {
+   background-color:#eee;
+}
+
+.ui-state-default {
+   display:inline-table;
+}
+
+.ui-state-default > a {
+   padding:10px;
+   line-height:40px;
+   outline: 0;
+}
+.grid-view table.items thead,
+.grid-view table.items th {
+   background: white !important;
+   font-size:1.2em;
+}
+
+.grid-view table.items tr.odd {
+   background: white !important;
+}
+
+.grid-view table.items tr.even {
+   background: #eee !important;
+
+}
+.grid-view table.items th > a {
+   color:black !important;
+}
+
+.button-column{
+   padding:0 !important;
+}
+
+.grid-view .summary {
+   margin-top: -60px !important;
+   float:right;
+}
+
+.grid-view table.items tbody tr:hover {
+   background:rgb(205, 41, 41) !important;
+   color:white !important;
+}
+
+.grid-view table.items thead > tr > th:first-child {
+   width:30px;
 }
